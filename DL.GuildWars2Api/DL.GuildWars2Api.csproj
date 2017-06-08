@@ -3,11 +3,12 @@
   <PropertyGroup>
     <TargetFrameworks>netcoreapp1.1;net461</TargetFrameworks>
     <Company>Digital Lagniappe</Company>
-    <Authors>knight0323</Authors>
+    <Authors>Digital Lagniappe</Authors>
     <Description>C# wrapper for the GW2 public API</Description>
     <Copyright>Digital Lagniappe</Copyright>
     <PackageLicenseUrl>https://github.com/digital-lagniappe/guildwars2api/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/digital-lagniappe/guildwars2api</PackageProjectUrl>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
