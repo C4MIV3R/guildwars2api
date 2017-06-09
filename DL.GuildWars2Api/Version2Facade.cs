@@ -25,6 +25,12 @@ namespace DL.GuildWars2Api
             return await new HttpClientHelper().GetStringAsync<Currency>(url);
         }
 
+        public async Task<Currency[]> GetCurrenciesAsync()
+        {
+            var url = $"v2/currencies?ids=all";
+            return await new HttpClientHelper().GetStringAsync<Currency[]>(url);
+        }
+
         #region Guilds   
 
         public async Task<GuildPermission[]> GetGuildPermissionByIdAsync(IEnumerable<string> ids)
