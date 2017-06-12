@@ -1,5 +1,5 @@
 # guildwars2api
-C# wrapper for the official Guild Wars 2 API 
+C# wrapper for the official Guild Wars 2 API. This wrapper aims to wrap the calls to the GW2 API and the following conversion to POCOs. Any caching, patterns, etc. outside of that will be outside of the scope of this wrapper. We want to create an easy to use and maintain wrapper that still allows for flexibility within your code.
 
 ### Implemented API Endpoints
 
