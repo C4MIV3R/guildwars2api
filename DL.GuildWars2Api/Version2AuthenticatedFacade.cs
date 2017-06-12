@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using DL.GuildWars2Api.DataTransferObjects;
+using DL.GuildWars2Api.DataTransferObjects.V2;
 
 namespace DL.GuildWars2Api
 {
@@ -54,6 +55,12 @@ namespace DL.GuildWars2Api
         #endregion
 
         #region Guilds
+
+        public async Task<Guild> GetGuildAsync(string guildId)
+        {
+            var url = $"v2/guild/{guildId}";
+            return await new HttpClientHelper().GetStringAsync<Guild>(url, this.ApiKey);
+        }
 
         public async Task<GuildLog[]> GetGuildLogAsync(string guildId)
         {

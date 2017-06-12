@@ -33,6 +33,13 @@ namespace DL.GuildWars2Api
 
         #region Guilds   
 
+        public async Task<string[]> GetGuildSearchAsync(string name)
+        {
+            var guildName = name.Replace(" ", "%20");
+            var url = $"v2/guild/search?name={guildName}";
+            return await new HttpClientHelper().GetStringAsync<string[]>(url);
+        }
+                
         public async Task<GuildPermission[]> GetGuildPermissionByIdAsync(IEnumerable<string> ids)
         {
             var list = string.Join(",", ids.Select(x => x).ToArray());

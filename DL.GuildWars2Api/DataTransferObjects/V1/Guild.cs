@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace DL.GuildWars2Api.DataTransferObjects
+namespace DL.GuildWars2Api.DataTransferObjects.V1
 {
     [JsonObject(MemberSerialization.OptIn)]
     public class Guild
