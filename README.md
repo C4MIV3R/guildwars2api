@@ -1,8 +1,6 @@
 # guildwars2api
 C# wrapper for the official Guild Wars 2 API 
 
-----------
-
 ### Implemented API Endpoints
 
 | Version | Endpoint | Description |
