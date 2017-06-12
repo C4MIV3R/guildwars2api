@@ -22,3 +22,8 @@ C# wrapper for the official Guild Wars 2 API
 | 2 | tokeninfo | Returns information about the supplied API Key. |
 | 2 | worlds | Returns world names |
 | 1 | guild_details | Returns detailed information about a guild. |
+
+### Useful Links
+
+ - https://github.com/arenanet/api-cdi
+ - https://wiki.guildwars2.com/wiki/API:Main
