@@ -11,6 +11,7 @@ C# wrapper for the official Guild Wars 2 API. This wrapper aims to wrap the call
 | 2 | account/wallet | Returns information about wealth associated with an API key. |
 | 2 | characters | Returns information on an account's characters. |
 | 2 | currencies | Returns information about wallet currencies. |
+| 2 | dungeons | Returns information about each dungeons and its associated paths. | 
 | 2 | guild/:id | Returns core details about a given guild. |
 | 2 | guild/:id/log | Returns information about a guild's event log. |
 | 2 | guild/:id/members | Returns information about members of a guild. |
@@ -21,6 +22,7 @@ C# wrapper for the official Guild Wars 2 API. This wrapper aims to wrap the call
 | 2 | guild/search | Returns information on guild ids to be used for other API queries. |
 | 2 | guild/upgrades | Returns information about guild upgrades and scribe decorations. |
 | 2 | items | Returns information about items |
+| 2 | raids | Returns information about each raid and its associated events. |
 | 2 | skins | Returns information about skins |
 | 2 | tokeninfo | Returns information about the supplied API Key. |
 | 2 | worlds | Returns world names |
