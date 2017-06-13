@@ -6,6 +6,8 @@ C# wrapper for the official Guild Wars 2 API. This wrapper aims to wrap the call
 | Version | Endpoint | Description |
 |:-------:|:---------|:------------|
 | 2 | account | Returns information about an account associated with an API key. |
+| 2 | account/dungeons | Returns information about the current daily cleared dungeons associated with an API key. |
+| 2 | account/raids | Returns information about completed raid events between weekly resets associated with an API key. |
 | 2 | account/wallet | Returns information about wealth associated with an API key. |
 | 2 | characters | Returns information on an account's characters. |
 | 2 | currencies | Returns information about wallet currencies. |
