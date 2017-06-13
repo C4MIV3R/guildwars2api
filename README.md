@@ -19,6 +19,7 @@ C# wrapper for the official Guild Wars 2 API. This wrapper aims to wrap the call
 | 2 | guild/search | Returns information on guild ids to be used for other API queries. |
 | 2 | guild/upgrades | Returns information about guild upgrades and scribe decorations. |
 | 2 | items | Returns information about items |
+| 2 | skins | Returns information about skins |
 | 2 | tokeninfo | Returns information about the supplied API Key. |
 | 2 | worlds | Returns world names |
 | 1 | guild_details | Returns detailed information about a guild. |
