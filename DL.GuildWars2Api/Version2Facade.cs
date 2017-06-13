@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using DL.GuildWars2Api.DataTransferObjects;
+using DL.GuildWars2Api.DataTransferObjects.V2;
 
 namespace DL.GuildWars2Api
 {
@@ -30,6 +31,29 @@ namespace DL.GuildWars2Api
             var url = $"v2/currencies?ids=all";
             return await new HttpClientHelper().GetStringAsync<Currency[]>(url);
         }
+
+        #region Dungeons
+
+        public async Task<string[]> GetDungeonsAsync()
+        {
+            const string url = "v2/dungeons";
+            return await new HttpClientHelper().GetStringAsync<string[]>(url);
+        }
+
+        public async Task<Dungeon> GetDungeonsAsync(string dungeonId)
+        {
+            string url = $"v2/dungeons/{dungeonId}";
+            return await new HttpClientHelper().GetStringAsync<Dungeon>(url);
+        }
+
+        public async Task<Dungeon[]> GetDungeonsAsync(string[] dungeonIdList)
+        {
+            var list = string.Join(",", dungeonIdList);
+            var url = $"v2/dungeons?ids={list}";
+            return await new HttpClientHelper().GetStringAsync<Dungeon[]>(url);
+        }
+
+        #endregion
 
         #region Guilds   
 
@@ -75,6 +99,46 @@ namespace DL.GuildWars2Api
         {
             var url = $"v2/items/{id}";
             return await new HttpClientHelper().GetStringAsync<Item>(url);
+        }
+
+        #endregion
+
+        #region Raids
+
+        public async Task<string[]> GetRaidsAsync()
+        {
+            const string url = "v2/raids";
+            return await new HttpClientHelper().GetStringAsync<string[]>(url);
+        }
+
+        public async Task<Dungeon> GetRaidsAsync(string dungeonId)
+        {
+            string url = $"v2/raids/{dungeonId}";
+            return await new HttpClientHelper().GetStringAsync<Dungeon>(url);
+        }
+
+        public async Task<Dungeon[]> GetRaidsAsync(string[] dungeonIdList)
+        {
+            var list = string.Join(",", dungeonIdList);
+            var url = $"v2/raids?ids={list}";
+            return await new HttpClientHelper().GetStringAsync<Dungeon[]>(url);
+        }
+
+        #endregion
+
+        #region Skins
+
+        public async Task<Skin[]> GetSkinByIdAsync(IEnumerable<int> idList)
+        {
+            var list = string.Join(",", idList.Select(x => x.ToString()).ToArray());
+            var url = $"v2/skins?ids={list}";
+            return await new HttpClientHelper().GetStringAsync<Skin[]>(url);
+        }
+
+        public async Task<Skin> GetSkinByIdAsync(int id)
+        {
+            var url = $"v2/skins/{id}";
+            return await new HttpClientHelper().GetStringAsync<Skin>(url);
         }
 
         #endregion

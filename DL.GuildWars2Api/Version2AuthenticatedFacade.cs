@@ -54,6 +54,17 @@ namespace DL.GuildWars2Api
 
         #endregion
 
+        #region Dungeons
+
+        public async Task<string[]> GetDungeonsAsync()
+        {
+            this.EnsureApiKey();
+            const string url = "v2/dungeons";
+            return await new HttpClientHelper().GetStringAsync<string[]>(url, this.ApiKey);
+        }
+
+        #endregion
+
         #region Guilds
 
         public async Task<Guild> GetGuildAsync(string guildId)
@@ -97,7 +108,18 @@ namespace DL.GuildWars2Api
             return await new HttpClientHelper().GetStringAsync<GuildTreasury[]>(url, this.ApiKey);
         }
 
-        #endregion  
+        #endregion
+
+        #region Raids
+
+        public async Task<string[]> GetRaidsAsync()
+        {
+            this.EnsureApiKey();
+            const string url = "v2/raids";
+            return await new HttpClientHelper().GetStringAsync<string[]>(url, this.ApiKey);
+        }
+
+        #endregion
 
         private void EnsureApiKey()
         {
