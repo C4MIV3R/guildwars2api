@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using DL.GuildWars2Api.DataTransferObjects;
-using DL.GuildWars2Api.DataTransferObjects.V2;
+using DL.GuildWars2Api.Models.V2;
 
 namespace DL.GuildWars2Api
 {
@@ -111,17 +110,17 @@ namespace DL.GuildWars2Api
             return await new HttpClientHelper().GetStringAsync<string[]>(url);
         }
 
-        public async Task<Dungeon> GetRaidsAsync(string dungeonId)
+        public async Task<Raid> GetRaidsAsync(string dungeonId)
         {
             string url = $"v2/raids/{dungeonId}";
-            return await new HttpClientHelper().GetStringAsync<Dungeon>(url);
+            return await new HttpClientHelper().GetStringAsync<Raid>(url);
         }
 
-        public async Task<Dungeon[]> GetRaidsAsync(string[] dungeonIdList)
+        public async Task<Raid[]> GetRaidsAsync(string[] dungeonIdList)
         {
             var list = string.Join(",", dungeonIdList);
             var url = $"v2/raids?ids={list}";
-            return await new HttpClientHelper().GetStringAsync<Dungeon[]>(url);
+            return await new HttpClientHelper().GetStringAsync<Raid[]>(url);
         }
 
         #endregion

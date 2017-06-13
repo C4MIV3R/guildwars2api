@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using DL.GuildWars2Api.DataTransferObjects;
-using DL.GuildWars2Api.DataTransferObjects.V2;
+using DL.GuildWars2Api.Models.V2;
 
 namespace DL.GuildWars2Api
 {
