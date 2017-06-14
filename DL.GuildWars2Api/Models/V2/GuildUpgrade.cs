@@ -9,7 +9,7 @@ namespace DL.GuildWars2Api.Models.V2
         public int Id { get; set; }
 
         [JsonProperty(PropertyName = "name")]
-        public string PropertyName { get; set; }
+        public string Name { get; set; }
 
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
