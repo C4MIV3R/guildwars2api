@@ -2,22 +2,34 @@
 using System.Linq;
 using System.Threading.Tasks;
 using DL.GuildWars2Api.Models.V2;
+using DL.GuildWars2Api.Contracts;
 
 namespace DL.GuildWars2Api
 {
-    public class Version2Facade
+    internal class Version2Facade : IVersion2Api
     {
         public Version2Facade()
+            : this(new Version2AuthenticatedFacade())
         {
-            this.Authenticated = new Version2AuthenticatedFacade();
         }
 
         public Version2Facade(string apiKey)
+            : this(new Version2AuthenticatedFacade(), apiKey)
         {
-            this.Authenticated = new Version2AuthenticatedFacade { ApiKey = apiKey };
         }
 
-        public Version2AuthenticatedFacade Authenticated { get; set; }
+        public Version2Facade(IVersion2AuthenticatedApi version2AuthApi)
+        {
+            this.Authenticated = version2AuthApi;
+        }
+
+        public Version2Facade(IVersion2AuthenticatedApi version2AuthApi, string apiKey)
+        {
+            this.Authenticated = version2AuthApi;
+            this.Authenticated.ApiKey = apiKey;
+        }
+
+        public IVersion2AuthenticatedApi Authenticated { get; set; }
 
         public async Task<Currency> GetCurrencyAsync(int currencyId)
         {

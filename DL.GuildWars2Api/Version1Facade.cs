@@ -1,9 +1,10 @@
 ﻿using System.Threading.Tasks;
+using DL.GuildWars2Api.Contracts;
 using DL.GuildWars2Api.Models.V1;
 
 namespace DL.GuildWars2Api
 {
-    public class Version1Facade
+    internal class Version1Facade : IVersion1Api
     {
         #region Guilds
 

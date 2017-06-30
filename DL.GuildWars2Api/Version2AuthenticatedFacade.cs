@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Threading.Tasks;
 using DL.GuildWars2Api.Models.V2;
+using DL.GuildWars2Api.Contracts;
 
 namespace DL.GuildWars2Api
 {
-    public class Version2AuthenticatedFacade
+    internal class Version2AuthenticatedFacade : IVersion2AuthenticatedApi
     {
         public string ApiKey { get; set; }
         public bool HasKey => !string.IsNullOrWhiteSpace(this.ApiKey);
