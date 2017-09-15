@@ -1,18 +1,19 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp1.1;net461</TargetFrameworks>
-    <Company>Digital Lagniappe</Company>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Digital Lagniappe</Authors>
+    <Company>Digital Lagniappe</Company>
     <Description>C# wrapper for the GW2 public API</Description>
     <Copyright>Digital Lagniappe</Copyright>
     <PackageLicenseUrl>https://github.com/digital-lagniappe/guildwars2api/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/digital-lagniappe/guildwars2api</PackageProjectUrl>
-    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <PackageReleaseNotes>initial release</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
     <PackageReference Include="System.Net.Http" Version="4.3.2" />
   </ItemGroup>
 

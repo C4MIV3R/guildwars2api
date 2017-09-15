@@ -14,5 +14,13 @@ namespace DL.GuildWars2Api.Tests.DataTransferObjects
             var actual = account.TotalAchievementPoints;
             Assert.Equal(0, actual);
         }
+
+        //[Fact]
+        //public void TotalAchievementPoints_Day1234Month4321_Total0()
+        //{
+        //    var account = new Account { DailyAchievementPoints = 1234, MonthlyAchievementPoints = 4321 };
+        //    var actual = account.TotalAchievementPoints;
+        //    Assert.Equal(5555, actual);
+        //}
     }
 }
