@@ -1,9 +1,12 @@
-﻿using DL.GuildWars2Api.Models.V2;
+﻿using DL.GuildWars2Api.Contracts.V2;
+using DL.GuildWars2Api.Models.V2;
 using System.Threading.Tasks;
 
 namespace DL.GuildWars2Api.Contracts
 {
-    public interface IVersion2AuthenticatedApi
+    public interface IVersion2AuthenticatedApi :
+        IAuthenticatedCharacterApi,
+        IAuthenticatedGuildApi
     {
         string ApiKey { get; set; }
         bool HasKey { get; }
@@ -16,27 +19,9 @@ namespace DL.GuildWars2Api.Contracts
 
         #endregion
 
-        #region Characters
-
-        Task<string[]> GetCharactersAsync();
-        Task<Character> GetCharacterAsync(string characterName);
-
-        #endregion
-
         #region Dungeons
 
         Task<string[]> GetDungeonsAsync();
-
-        #endregion
-
-        #region Guilds
-
-        Task<Guild> GetGuildAsync(string guildId);
-        Task<GuildLog[]> GetGuildLogAsync(string guildId);
-        Task<GuildMember[]> GetGuildMemberAsync(string guildId);
-        Task<GuildRank[]> GetGuildRanksAsync(string guildId);
-        Task<GuildStash[]> GetGuildStashAsync(string guildId);
-        Task<GuildTreasury[]> GetGuildTreasuryAsync(string guildId);
 
         #endregion
 

@@ -1,15 +1,8 @@
-﻿using DL.GuildWars2Api.Models.V1;
-using System.Threading.Tasks;
+﻿using DL.GuildWars2Api.Contracts.V1;
 
 namespace DL.GuildWars2Api.Contracts
 {
-    public interface IVersion1Api
+    public interface IVersion1Api : IGuildApi
     {
-        #region Guilds
-
-        Task<Guild> GetGuildByIdAsync(string guildId);
-        Task<Guild> GetGuildByNameAsync(string guildName);
-
-        #endregion
     }
 }
