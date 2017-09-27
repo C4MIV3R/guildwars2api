@@ -26,7 +26,7 @@ namespace DL.GuildWars2Api.Models.V2
         public string Created { get; set; }
 
         [JsonProperty(PropertyName = "access")]
-        public string Access { get; set; }
+        public string[] Access { get; set; }
 
         [JsonProperty(PropertyName = "commander")]
         public bool HasCommanderTag { get; set; }

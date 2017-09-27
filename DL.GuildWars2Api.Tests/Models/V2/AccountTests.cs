@@ -1,7 +1,7 @@
 ﻿using DL.GuildWars2Api.Models.V2;
 using Xunit;
 
-namespace DL.GuildWars2Api.Tests.DataTransferObjects
+namespace DL.GuildWars2Api.Tests.Models.V2
 {
     public class AccountTests
     {
