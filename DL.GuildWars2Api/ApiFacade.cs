@@ -1,4 +1,8 @@
 ﻿using DL.GuildWars2Api.Contracts;
+using DL.GuildWars2Api.Contracts.V1;
+using DL.GuildWars2Api.Contracts.V2;
+using DL.GuildWars2Api.V1;
+using DL.GuildWars2Api.V2;
 
 namespace DL.GuildWars2Api
 {
@@ -28,8 +32,8 @@ namespace DL.GuildWars2Api
 
         public string ApiKey
         {
-            get { return this.V2.Authenticated.ApiKey; }
-            set { this.V2.Authenticated.ApiKey = value; }
+            get => this.V2.ApiKey;
+            set => this.V2.ApiKey = value;
         }
 
         public IVersion1Api V1 { get; }

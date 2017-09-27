@@ -1,13 +1,11 @@
 ﻿using System.Threading.Tasks;
-using DL.GuildWars2Api.Contracts;
+using DL.GuildWars2Api.Contracts.V1;
 using DL.GuildWars2Api.Models.V1;
 
-namespace DL.GuildWars2Api
+namespace DL.GuildWars2Api.V1
 {
-    internal class Version1Facade : IVersion1Api
+    internal class GuildApi : IGuildApi
     {
-        #region Guilds
-
         public async Task<Guild> GetGuildByIdAsync(string guildId)
         {
             var url = $"v1/guild_details.json?guild_id={guildId}";
@@ -20,7 +18,5 @@ namespace DL.GuildWars2Api
             var url = $"v1/guild_details.json?guild_name={guildName}";
             return await new HttpClientHelper().GetStringAsync<Guild>(url);
         }
-
-        #endregion
     }
 }

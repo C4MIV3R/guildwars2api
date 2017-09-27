@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace DL.GuildWars2Api.Contracts.V2
 {
-    public interface IAuthenticatedGuildApi
+    public interface IAuthenticatedGuildApi : IAuthenticated, IGuildApi
     {
         Task<Guild> GetGuildAsync(string guildId);
         Task<GuildLog[]> GetGuildLogAsync(string guildId);

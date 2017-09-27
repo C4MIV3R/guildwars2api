@@ -1,4 +1,7 @@
-﻿namespace DL.GuildWars2Api.Contracts
+﻿using DL.GuildWars2Api.Contracts.V1;
+using DL.GuildWars2Api.Contracts.V2;
+
+namespace DL.GuildWars2Api.Contracts
 {
     public interface IApiFacade
     {
