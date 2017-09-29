@@ -5,7 +5,7 @@ namespace DL.GuildWars2Api.Tests.V2
 {
     public class AccountApiTests
     {
-        private const string key = "";
+        private string key = TestHelper.GetApiKey();
 
         [Fact(Skip = "Integration Test; Requires API Key")]
         public void GetAccountAsync_Integration()

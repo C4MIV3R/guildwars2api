@@ -60,6 +60,7 @@
     <Compile Include="Models\V2\AccountTests.cs" />
     <Compile Include="Models\V2\WorldTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestHelper.cs" />
     <Compile Include="V2\AccountApiTests.cs" />
     <Compile Include="V2\AuthenticatedBaseTests.cs" />
     <Compile Include="Version2AuthenticatedTests.cs" />
